@@ -1,0 +1,33 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 1rem;
+  border: 1px solid #ccc;
+}
+.top button {
+  font: inherit;
+  cursor: pointer;
+  background-color: #8a2b06;
+  border: 1px solid #8a2b06;
+  color: white;
+  padding: 0.25rem 2rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.summary {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  /* padding-bottom: 2rem; */
+  margin: 1rem;
+  border: 1px solid #ccc;
+}
+
+.summary_item {
+  text-align: center;
+  /* border: 1px solid #ccc; */
+}
