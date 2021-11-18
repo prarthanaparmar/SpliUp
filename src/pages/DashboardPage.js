@@ -1,10 +1,14 @@
 import React, { useCallback, useEffect, useState } from "react";
+import AddExpense from "../components/AddExpense";
 
 import DashboardTop from "../components/DashboardTop";
 import Expenses from "../components/Expenses";
 
 const DashboardPage = () => {
   //   console.log("inside dashboard");
+  const [showExpenses, setShowExpenses] = useState(true);
+  const [showAddExpense, setShowAddExpense] = useState(false);
+
   const [totalBalance, setTotalBalance] = useState(0.0);
   const [youOwe, setYouOwe] = useState(0.0);
   const [youAreOwed, setYouAreOwed] = useState(0.0);
@@ -39,8 +43,11 @@ const DashboardPage = () => {
         totalBalance={totalBalance}
         youOwe={youOwe}
         youAreOwed={youAreOwed}
+        // showAddExpense={}
       />
       <Expenses />
+      {/* {showExpenses && <Expenses />}
+      {showAddExpense && <AddExpense />} */}
     </>
   );
 };

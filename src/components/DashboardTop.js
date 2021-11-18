@@ -1,11 +1,21 @@
+import { useState } from "react";
+import AddExpense from "./AddExpense";
 import classes from "./DashboardTop.module.css";
 
 const DashboardTop = (props) => {
+  const [showAddExpense, setShowAddExpense] = useState(false);
+  const showAddHandler = () => {
+    setShowAddExpense(true);
+  };
+  const hideAddHandler = () => {
+    setShowAddExpense(false);
+  };
+
   return (
     <div>
       <div className={classes.top}>
         <h1>Dashboard</h1>
-        <button>Add an expense</button>
+        <button onClick={showAddHandler}>Add an expense</button>
         <button>Settle Up</button>
       </div>
       <div className={classes.summary}>
@@ -22,6 +32,7 @@ const DashboardTop = (props) => {
           <div>{props.youAreOwed}</div>
         </div>
       </div>
+      {showAddExpense && <AddExpense onClose={hideAddHandler} />}
     </div>
   );
 };
